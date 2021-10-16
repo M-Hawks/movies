@@ -5,19 +5,18 @@
   <title>Movies</title>
   <meta name='viewport'
      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="title">
-    <h1>Movies</h1>
+    <h1>Search Movies by Keyword(s)</h1>
   </div>
-
 
   <div class="input">
     <form class="submit">
-      <label>Enter a movie</label>
+      <label>Enter keyword(s)</label>
         <div>
           <input id="movieInput" type="text"></input>
           <input id="movieSubmit" type="submit" value="Submit"></input>
@@ -25,16 +24,7 @@
     </form>
   </div>
 
-  <br />
-  <a href="movieKeyword.html">Other Webpage</a>
-
-  </br>
-  <h1 id="title"></h1>
-  <img src="" id="poster">
-  <p id="overview"></p>
-  <p id="release_date"></p>
-
-
+  <div id="movie-table"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

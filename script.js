@@ -12,8 +12,43 @@ document.getElementById("movieSubmit").addEventListener("click", function(event)
       console.log(json.results[0].title);
       console.log(json.results[0].overview);
 
-      const posterPath = "https://image.tmdb.org/t/p/w500" + json.results[0].poster_path;
-      document.getElementById("poster").src = posterPath;
-    });
+      const title = json.results[0].title;
+      var elementExists = document.getElementById("title");
+      if (elementExists) document.getElementById("title").innerHTML = title;
 
+      const posterPath = "https://image.tmdb.org/t/p/w500" + json.results[0].poster_path;
+      elementExists = document.getElementById("poster");
+      if (elementExists) document.getElementById("poster").src = posterPath;
+
+      const overview = json.results[0].overview;
+      elementExists = document.getElementById("overview");
+      if (elementExists) document.getElementById("overview").innerHTML = overview;
+
+      const release_date = json.results[0].release_date;
+      elementExists = document.getElementById("release_date");
+      if (elementExists) document.getElementById("release_date").innerHTML = "This was released: " + release_date;
+
+
+      const posterPathList = "https://image.tmdb.org/t/p/w500";
+      var divExists = document.getElementById("movie-table");
+      if (divExists)
+      {
+        for (var i=0; i<json.results.length; i++)
+        {
+          var divLeft = document.createElement('div');
+          divLeft.innerHTML = json.results[i].title;
+
+          var divRight = document.createElement('div');
+          if (json.results[i].poster_path != null)
+          {
+            var img = document.createElement('img');
+            img.src = posterPathList + json.results[i].poster_path;
+            divRight.appendChild(img);
+          }
+
+          divExists.appendChild(divLeft);
+          divExists.appendChild(divRight);
+        }
+      }
+    });
 });
