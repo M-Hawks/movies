@@ -28,27 +28,17 @@ document.getElementById("movieSubmit").addEventListener("click", function(event)
       elementExists = document.getElementById("release_date");
       if (elementExists) document.getElementById("release_date").innerHTML = "This was released: " + release_date;
 
-
+      var title_list = "";
       const posterPathList = "https://image.tmdb.org/t/p/w500";
-      var divExists = document.getElementById("movie-table");
-      if (divExists)
+      titleExists = document.getElementById("title-list");
+      if (titleExists)
       {
         for (var i=0; i<json.results.length; i++)
         {
-          var divLeft = document.createElement('div');
-          divLeft.innerHTML = json.results[i].title;
-
-          var divRight = document.createElement('div');
-          if (json.results[i].poster_path != null)
-          {
-            var img = document.createElement('img');
-            img.src = posterPathList + json.results[i].poster_path;
-            divRight.appendChild(img);
-          }
-
-          divExists.appendChild(divLeft);
-          divExists.appendChild(divRight);
+          if (json.results[i].poster_path != null) { title_list += json.results[i].title + "<br />" + "<img src="+posterPathList+json.results[i].poster_path+">" + "<br />"; }
+          else { title_list += json.results[i].title + "<br />"; }
         }
+        document.getElementById("title-list").innerHTML = title_list;
       }
     });
 });
