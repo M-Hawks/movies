@@ -9,6 +9,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Movie Search</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="movieKeyword.html">Keyword Search</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
   <div class="title">
     <h1>Movies</h1>
@@ -26,15 +40,26 @@
   </div>
 
   <br />
-  <a href="movieKeyword.html">Other Webpage</a>
+  <div class="output">
+    <h1 id="title"></h1>
+    <img src="" id="poster">
+    <br />
+    <div class="output-text">
+      <p id="overview"></p>
+      <br />
+    </div>
+    <div class="output-text">
+      <p id="release_date"></p>
+    </div>
+    <br />
+  </div>
 
-  </br>
-  <h1 id="title"></h1>
-  <img src="" id="poster">
-  <p id="overview"></p>
-  <p id="release_date"></p>
-
-
+  <footer class="footer">
+    <div class="text-center p-3" style="background-color: #383c44;">
+      <a class="text-light">Jack Estes and Michael Hawks  |</a>
+      <a class="text-light" href="https://github.com/JackEstes06/CreativeProject-Movies.git" target="_blank">Github Repository</a>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

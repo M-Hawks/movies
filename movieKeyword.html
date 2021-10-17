@@ -9,6 +9,20 @@
      <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Movie Search</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="movieKeyword.html">Keyword Search</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
   <div class="title">
     <h1>Search Movies by Keyword(s)</h1>
@@ -27,19 +41,29 @@
   <div class="output">
     <h1 id="title-list-1"></h1>
     <img src="" id="poster-list-1">
+    <br />
     <h1 id="title-list-2"></h1>
     <img src="" id="poster-list-2">
+    <br />
     <h1 id="title-list-3"></h1>
     <img src="" id="poster-list-3">
+    <br />
     <h1 id="title-list-4"></h1>
     <img src="" id="poster-list-4">
+    <br />
     <h1 id="title-list-5"></h1>
     <img src="" id="poster-list-5">
-
+    <br />
     <h1 id="other"></h1>
     <p id="other-list"></p>
   </div>
 
+  <footer class="footer">
+    <div class="text-center p-3" style="background-color: #383c44;">
+      <a class="text-light">Jack Estes and Michael Hawks  |</a>
+      <a class="text-light" href="https://github.com/JackEstes06/CreativeProject-Movies.git" target="_blank">Github Repository</a>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
