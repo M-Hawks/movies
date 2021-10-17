@@ -49,20 +49,29 @@ body {
   padding: 25px 25px 0px 25px;
   flex-direction: column;
 }
-.output img {
-  width: 100%;
+.output-img {
+  display: flex;
+  width: auto;
+  flex-direction: column;
 }
-
 /* Mobile Styles */
 @media only screen and (max-width: 450px) {
-
+  .output img {
+    width: 100%;
+  }
+  .output-img {
+    width: 100%;
+  }
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 451px) and (max-width: 960px) {
-
+  .output-img {
+    width: auto;
+  }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
+
 }
